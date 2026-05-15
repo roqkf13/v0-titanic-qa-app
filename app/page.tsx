@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, FormEvent, KeyboardEvent } from "react";
-import { Send, Loader2, AlertCircle, RefreshCw, Database, MessageSquare, LogIn } from "lucide-react";
+import { Send, Loader2, AlertCircle, RefreshCw, Database, MessageSquare } from "lucide-react";
 
 /* ──────────────────────────────────────────────────────────────────────────
    Constants & Types
@@ -34,23 +34,8 @@ export default function TitanicQaApp() {
   const [view, setView] = useState<View>("qa");
 
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
-      {/* Navigation Bar */}
-      <nav className="sticky top-0 z-10 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-lg mx-auto px-4 h-14 flex items-center justify-between">
-          <h1 className="text-lg font-bold tracking-tight">Titanic QA</h1>
-          <button
-            type="button"
-            aria-label="로그인"
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
-          >
-            <LogIn size={16} aria-hidden="true" />
-            로그인
-          </button>
-        </div>
-      </nav>
-
-      <div className="max-w-lg mx-auto px-4 py-6 flex flex-col min-h-[calc(100vh-56px)]">
+    <main className="flex flex-1 flex-col min-h-0 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+      <div className="max-w-lg mx-auto px-4 py-6 flex flex-col flex-1 min-h-0 w-full">
         {/* Header */}
         <header className="text-center mb-4">
           <h2 className="text-2xl font-bold tracking-tight">Titanic QA Assistant</h2>
